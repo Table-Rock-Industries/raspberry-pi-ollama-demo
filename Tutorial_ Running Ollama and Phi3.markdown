@@ -96,8 +96,10 @@ Time to write a Python program to talk to Phi3.5 programmatically.
        :param prompt: The text to send to Phi3.5
        :return: The response from Phi3.5
        """
-       response = ollama.generate(model="phi3.5", prompt=prompt)
-       return response['response']
+      response = requests.post("http://localhost:11434/api/generate", json={"model": "mistral", "prompt": prompt, "stream": False})
+      result = response.json()
+      message = result.get("response", "")
+      return message
 
    # Test the function
    if __name__ == "__main__":

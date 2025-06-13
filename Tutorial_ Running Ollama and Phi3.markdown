@@ -118,9 +118,9 @@ Time to write a Python program to talk to Phi3.5 programmatically.
 Finally, let’s build a program to write blog posts about historic presidents.
 
 1. Create a file named `ai_blogger.py` in the same directory as `ai.py`.
-2. Add this code:
+2. Create a folder named `presidents_blog` in the same directory as `ai.py`.
+3. Add this code:
    ```python
-   import os
    from ai import LLM
 
    # List of historic presidents
@@ -133,23 +133,23 @@ Finally, let’s build a program to write blog posts about historic presidents.
    ]
 
    # Folder for blog posts
-   output_dir = "President Blogs"
-   os.makedirs(output_dir, exist_ok=True)
+   output_dir = "presidents_blog"
+
 
    # Generate blog posts
    for president in most_historic_presidents:
        prompt = f"Write a blog post about {president}"
        blog_post = LLM(prompt)
        filename = f"{president.replace(' ', '_')}.txt"
-       with open(os.path.join(output_dir, filename), "w") as f:
+       with open(f"{output_dir}/{filename}"), "w") as f:
            f.write(blog_post)
        print(f"Saved blog post for {president} to {filename}")
    ```
-3. Save the file and run it:
+4. Save the file and run it:
    ```bash
    python ai_blogger.py
    ```
-4. Check the `President Blogs` folder. You’ll find a `.txt` file for each president with their blog post!
+5. Check the `President Blogs` folder. You’ll find a `.txt` file for each president with their blog post!
 
 ## Conclusion
 

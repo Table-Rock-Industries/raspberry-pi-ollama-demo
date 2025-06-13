@@ -79,14 +79,8 @@ Let’s make sure Phi3.5 works by asking it a question.
 ## Step 4: Create `ai.py` with the `LLM(prompt)` Function
 
 Time to write a Python program to talk to Phi3.5 programmatically.
-
-1. Install the Ollama Python library (if available):
-   ```bash
-   pip install ollama
-   ```
-   *Note: If there’s no official library yet, check Ollama’s documentation for the correct package or API method.*
-2. Open a text editor and create a file named `ai.py`.
-3. Add this code:
+1. Open a text editor and create a file named `ai.py`.
+2. Add this code:
    ```python
 
 
@@ -107,7 +101,7 @@ Time to write a Python program to talk to Phi3.5 programmatically.
        print(LLM(test_prompt))
    ```
    *Note: Adjust the `ollama.generate` call based on the actual API syntax from Ollama’s documentation.*
-4. Save the file and run it:
+3. Save the file and run it:
    ```bash
    python ai.py
    ```

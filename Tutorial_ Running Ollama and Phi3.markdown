@@ -149,7 +149,7 @@ Finally, let’s build a program to write blog posts about historic presidents.
    ```bash
    python ai_blogger.py
    ```
-5. Check the `President Blogs` folder. You’ll find a `.txt` file for each president with their blog post!
+5. Check the `presidents_blog` folder. You’ll find a `.txt` file for each president with their blog post!
 
 ## Conclusion
 

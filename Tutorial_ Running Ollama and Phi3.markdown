@@ -33,7 +33,7 @@ First, let’s get Ollama running on your Raspberry Pi.
    ```bash
    sudo apt update
    sudo apt upgrade -y
-   apt install python3-requests
+   sudo apt install python3-requests
    ```
 3. Install Ollama by following the official instructions. Visit the Ollama website (typically at `https://ollama.ai`) and look for the Raspberry Pi installation guide. As of now, you might run a command like:
    ```bash

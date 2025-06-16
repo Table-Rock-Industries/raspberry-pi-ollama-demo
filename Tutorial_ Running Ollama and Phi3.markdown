@@ -83,8 +83,8 @@ Time to write a Python program to talk to Phi3.5 programmatically.
 1. Open a text editor and create a file named `ai.py`.
 2. Add this code:
    ```python
-
-
+   import requests
+   
    def LLM(prompt):
        """
        Sends a prompt to Phi3.5 and returns the response.
@@ -136,7 +136,7 @@ Finally, let’s build a program to write blog posts about historic presidents.
        prompt = f"Write a blog post about {president}"
        blog_post = LLM(prompt)
        filename = f"{president.replace(' ', '_')}.txt"
-       with open(f"{output_dir}/{filename}"), "w") as f:
+       with open(f'{output_dir}/{filename}', 'w') as f:
            f.write(blog_post)
        print(f"Saved blog post for {president} to {filename}")
    ```
